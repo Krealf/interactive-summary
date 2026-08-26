@@ -1,93 +1,218 @@
 <!doctype html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Интерактивное резюме</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-    <header class="header">
-        <nav class="header__nav">
-            <ul class="nav-list">
-                <li class="nav-list__item">
-                    <a href="#about" class="nav-list__link">Обо мне</a>
-                </li>
-                <li class="nav-list__item">
-                    <a href="#skills" class="nav-list__link">Навыки</a>
-                </li>
-                <li class="nav-list__item">
-                    <a href="#work" class="nav-list__link">Проекты</a>
-                </li>
-                <li class="nav-list__item">
-                    <a href="#experience" class="nav-list__link">Опыт</a>
-                </li>
-                <li class="nav-list__item">
-                    <a href="#contact" class="nav-list__link">Контакты</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="section home">
-            <div class="section__body">
-                <div class="home">
-                    <p class="home__text">Привет, я</p>
-                    <h1 class="home__initials">Учаев Константин</h1>
-                    <p class="home__specialty">Project Manager & Full-stack Developer</p>
-                    <p class="home__description">Я создаю эффективные продукты, которые решают реальные проблемы и оказывают значимое воздействие. От идеи до внедрения. Я превращаю сложные задачи в простые и прекрасные решения.</p>
-                </div>
-                <div class="home__actions">
-                    <a href="#works">Посмотреть мои работы</a>
-                    <a href="#contact">Связаться со мной</a>
-                </div>
-            </div>
-            <div class="section__img">
-                <img src="https://zight.com/wp-content/uploads/2022/07/16-Work-from-Home-Productivity-Tips-2.jpg"
-                     alt="Мужчина с ноутбуком лежит на кресле">
-            </div>
-        </section>
-        <section class="section about" id="about">
-            <div class="section__body">
-                <div class="about">
-                    <h2 class="about__title title">Обо мне</h2>
-                    <p class="about__description">Я создаю эффективные продукты, которые решают реальные проблемы и оказывают значимое воздействие. От идеи до внедрения. Я превращаю сложные задачи в простые и прекрасные решения.</p>
-                </div>
-                <div class="about__competencies">
-                    <ul class="competencies__list">
-                        <li class="competencies__item">Всегда стараюсь разобраться в вопросе</li>
-                        <li class="competencies__item">Никогда не останавливаюсь в обучении</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="section__img">
-                <img src="https://www.overflow.design/assets/img/nc/solving-a-problem.jpg"
-                     alt="Мужчина складывает пазл">
-            </div>
-        </section>
-        <section class="section skills" id="skills">
-            <div class="skills__header">
-                <h2 class="skills__title title">Обо мне</h2>
-                <div class="skills__categories" id="category">
-                    <button>Все</button>
-                    <button>Frontend</button>
-                    <button>Backend</button>
-                    <button>Tools</button>
-                </div>
-            </div>
 
-            <div class="skills__body">
-                <ul class="skills__list">
-                    <li class="skills__item">
-                        <img src="" alt="">
-                        <p>JavaScript</p>
-                    </li>
+<body>
+<header class="header">
+    <nav class="header__nav">
+        <ul class="nav-list">
+            <li class="nav-list__item">
+                <a href="#about" class="nav-list__link">Обо мне</a>
+            </li>
+            <li class="nav-list__item">
+                <a href="#skills" class="nav-list__link">Навыки</a>
+            </li>
+            <li class="nav-list__item">
+                <a href="#work" class="nav-list__link">Проекты</a>
+            </li>
+            <li class="nav-list__item">
+                <a href="#experience" class="nav-list__link">Опыт</a>
+            </li>
+            <li class="nav-list__item">
+                <a href="#contact" class="nav-list__link">Контакты</a>
+            </li>
+        </ul>
+        <fieldset class="skills__categories" id="theme">
+            <legend>Выберите тему:</legend>
+            <span>
+          <input type="radio" value="dark" id="theme-switcher-dark">
+          <label for="theme-switcher-dark">Dark</label>
+        </span>
+            <span>
+          <input type="radio" value="light" id="theme-switcher-light">
+          <label for="theme-switcher-light">Light</label>
+        </span>
+        </fieldset>
+    </nav>
+</header>
+<main>
+    <section class="section home">
+        <div class="section__body">
+            <div class="home">
+                <p class="home__text">Привет, я</p>
+                <h1 class="home__initials">Учаев Константин</h1>
+                <p class="home__specialty">Project Manager & Full-stack Developer</p>
+                <p class="home__description">Студент ГУАП и Full-stack разработчик.
+                    Создаю надежные веб-приложения на TypeScript, React и Node.js,
+                    совмещая академическую инженерную базу с практикой продуктовой
+                    разработки.</p>
+            </div>
+            <div class="home__actions">
+                <a href="#works">Посмотреть мои работы</a>
+                <a href="#contact">Связаться со мной</a>
+            </div>
+        </div>
+        <div class="section__img">
+            <img
+                    src="https://zight.com/wp-content/uploads/2022/07/16-Work-from-Home-Productivity-Tips-2.jpg"
+                    alt="Мужчина с ноутбуком лежит на кресле">
+        </div>
+    </section>
+    <section class="section about" id="about">
+        <div class="section__body">
+            <div class="about">
+                <h2 class="about__title title">Обо мне</h2>
+                <p class="about__description">Обучаюсь в Санкт-Петербургском
+                    государственном университете аэрокосмического приборостроения (ГУАП)
+                    по направлению информационных технологий. Фундаментальную
+                    академическую подготовку (алгоритмы, структуры данных, базы данных и
+                    сети) активно применяю в веб-разработке. Создаю масштабируемые
+                    full-stack сервисы на стеке TypeScript, React, Express и
+                    PostgreSQL/MongoDB, уделяя особое внимание чистоте архитектуры,
+                    типизации и надежному развертыванию в Docker.</p>
+            </div>
+            <div class="about__competencies">
+                <ul class="competencies__list">
+                    <li class="competencies__item">Проектирование предсказуемых REST API
+                        и клиент-серверного взаимодействия</li>
+                    <li class="competencies__item">Уверенная работа со строгой
+                        типизацией на TypeScript на всем стеке</li>
+                    <li class="competencies__item">Настройка контейнеризации и деплоя на
+                        Linux-серверах с Nginx</li>
+                    <li class="competencies__item">Умение декомпозировать сложные
+                        продуктовые задачи и доводить их до релиза</li>
+                    <li class="competencies__item">Постоянная практика рефакторинга и
+                        оптимизации структуры проектов</li>
                 </ul>
             </div>
-        </section>
-        <section class="section works"></section>
-        <section class="section experience"></section>
-    </main>
-    <script src="./script.js"></script>
+        </div>
+        <div class="section__img">
+            <img
+                    src="https://www.overflow.design/assets/img/nc/solving-a-problem.jpg"
+                    alt="Мужчина складывает пазл">
+        </div>
+    </section>
+    <section class="section skills" id="skills">
+        <div class="skills__header section__header">
+            <h2 class="skills__title title">Обо мне</h2>
+            <fieldset class="skills__categories" id="category">
+                <legend>Выберите категорию:</legend>
+                <span>
+            <input type="radio" value="all" id="category-select-all">
+            <label for="category-select-all">All</label>
+          </span>
+                <span>
+            <input type="radio" value="frontend" id="category-select-frontend">
+            <label for="category-select-frontend">Frontend</label>
+          </span>
+                <span>
+            <input type="radio" value="backend" id="category-select-backend">
+            <label for="category-select-backend">Backend</label>
+          </span>
+                <span>
+            <input type="radio" value="tools" id="category-select-tools">
+            <label for="category-select-tools">Tools</label>
+          </span>
+            </fieldset>
+            <input type="search" name="search" id="search">
+        </div>
+        <div class="skills__body">
+            <ul class="skills__list">
+                <li class="skills__item">
+                    <img src="" alt="">
+                    <p>TypeScript</p>
+                </li>
+                <li class="skills__item">
+                    <img src="" alt="">
+                    <p>JavaScript</p>
+                </li>
+                <li class="skills__item">
+                    <img src="" alt="">
+                    <p>React</p>
+                </li>
+                <li class="skills__item">
+                    <img src="" alt="">
+                    <p>Redux Toolkit</p>
+                </li>
+                <li class="skills__item">
+                    <img src="" alt="">
+                    <p>Vite</p>
+                </li>
+                <li class="skills__item">
+                    <img src="" alt="">
+                    <p>Node.js</p>
+                </li>
+                <li class="skills__item">
+                    <img src="" alt="">
+                    <p>Express.js</p>
+                </li>
+                <li class="skills__item">
+                    <img src="" alt="">
+                    <p>MongoDB</p>
+                </li>
+                <li class="skills__item">
+                    <img src="" alt="">
+                    <p>Nginx</p>
+                </li>
+                <li class="skills__item">
+                    <img src="" alt="">
+                    <p>Docker</p>
+                </li>
+                <li class="skills__item">
+                    <img src="" alt="">
+                    <p>WebStorm</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="section works">
+        <div class="section__header works__header">
+            <h2>Примеры работ</h2>
+        </div>
+        <div class="section__body works__body">
+            <article class="work">
+                <div class="work__image">
+                    <img src="" alt="">
+                </div>
+                <div class="work__body">
+                    <a href="#" class="work__title">
+                        <h1>Bookmark Manager</h1>
+                    </a>
+                    <p class="work__description"></p>
+                    <ul class="tools__list">
+                        <li class="tools__item">Express</li>
+                        <li class="tools__item">TypeScript</li>
+                        <li class="tools__item">CSS Modules</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="section education">
+    </section>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__title">
+            <p>Давайте обсудим проект или сотрудничество</p>
+        </div>
+        <div class="contacts">
+            <a href="mailto:konstantin-uchaev@mail.ru"
+               class="contacts__email">konstantin-uchaev@mail.ru</a>
+            <a href="" class="contacts__location">Санкт-Петербург, Россия</a>
+        </div>
+        <div class="soc1als">
+            <a href="https://github.com/Krealf">Github</a>
+        </div>
+    </div>
+</footer>
+<script src="./script.js"></script>
 </body>
+
 </html>
