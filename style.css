@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'Manrope';
+    src: url('./fonts/Manrope-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('./fonts/Manrope-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('./fonts/Manrope-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+body,
+[data-theme='light'] {
+    --color-text: #051513;
+    --color-bg: #e8f0ef;
+    --color-text-faint: #899492;
+    --color-switcher-bg: #dde9e7;
+    --color-surface-inverse: #fff;
+    --color-border-muted: #c0cfcc;
+}
+
+body, [data-theme='dark'] {
+    --color-bg: #001414;
+    --color-text: #ffffff;
+    --color-text-faint: #004746;
+    --color-switcher-bg: #004241;
+    --color-surface-inverse: #001f1f;
+    --color-border-muted: #004241;
+}
+
+/* Нормализация блочной модели */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+/* Убираем margin у заголовком, у которых есть class */
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
+    margin-block: 0;
+}
+
+/* Убираем стандартный маркер у списков, где есть class */
+:where(ul[class]) {
+    list-style: none;
+}
+
+html {
+    /** Пригодится в большинстве ситуаций (когда, например, нужно будет "прижать" футер к низу сайта)*/
+    height: 100%;
+
+    /** Убираем скачок интерфейса по горизонтали при появлении / исчезновении скроллбара */
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: 0;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+
+    background-color: var(--color-bg);
+    color: var(--color-text);
+
+    transition-duration: 0.2s;
+}
+
+.container {
+    width: 100%;
+    max-width: 1272px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    padding-block: 20px;
+}
+
+.nav-list {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    gap: 10px;
+}
+
+.nav-list__link:hover {
+    color: var(--color-text-faint);
+}
+
+.toggle-theme {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-surface-inverse);
+    box-shadow: inset 0 0 0 2px var(--color-border-muted);
+    font-size: 14px;
+    font-family: 'Manrope', sans-serif;
+    padding: 10px;
+}
+
+.toggle-theme:hover {
+    background-color: var(--color-bg);
+}
+
+.section--home {
+    display: flex;
+}
+
+.section__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

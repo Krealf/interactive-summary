@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<body data-theme="light">
 <header class="header">
-    <nav class="header__nav">
+    <nav class="header__nav container">
         <ul class="nav-list">
             <li class="nav-list__item">
                 <a href="#about" class="nav-list__link">Обо мне</a>
@@ -19,30 +19,20 @@
                 <a href="#skills" class="nav-list__link">Навыки</a>
             </li>
             <li class="nav-list__item">
-                <a href="#work" class="nav-list__link">Проекты</a>
+                <a href="#works" class="nav-list__link">Проекты</a>
             </li>
             <li class="nav-list__item">
-                <a href="#experience" class="nav-list__link">Опыт</a>
+                <a href="#education" class="nav-list__link">Опыт</a>
             </li>
             <li class="nav-list__item">
                 <a href="#contact" class="nav-list__link">Контакты</a>
             </li>
         </ul>
-        <fieldset class="skills__categories" id="theme">
-            <legend>Выберите тему:</legend>
-            <span>
-          <input type="radio" value="dark" id="theme-switcher-dark">
-          <label for="theme-switcher-dark">Dark</label>
-        </span>
-            <span>
-          <input type="radio" value="light" id="theme-switcher-light">
-          <label for="theme-switcher-light">Light</label>
-        </span>
-        </fieldset>
+        <button class="toggle-theme">Переключить тему</button>
     </nav>
 </header>
-<main>
-    <section class="section home">
+<main class="main">
+    <section class="section section--home container">
         <div class="section__body">
             <div class="home">
                 <p class="home__text">Привет, я</p>
@@ -59,12 +49,12 @@
             </div>
         </div>
         <div class="section__img">
-            <img
-                    src="https://zight.com/wp-content/uploads/2022/07/16-Work-from-Home-Productivity-Tips-2.jpg"
-                    alt="Мужчина с ноутбуком лежит на кресле">
+            <img src="imgs/man-with-computer.png"
+                 alt="Мужчина сидит с ноутбуком"
+                 width="258" height="320">
         </div>
     </section>
-    <section class="section about" id="about">
+    <section class="section about container" id="about">
         <div class="section__body">
             <div class="about">
                 <h2 class="about__title title">Обо мне</h2>
@@ -100,10 +90,13 @@
         <div class="section__img">
             <img
                     src="https://www.overflow.design/assets/img/nc/solving-a-problem.jpg"
-                    alt="Мужчина складывает пазл">
+                    alt="Мужчина складывает пазл"
+                    width="450"
+                    height="375"
+                    loading="lazy">
         </div>
     </section>
-    <section class="section skills" id="skills">
+    <section class="section skills container" id="skills">
         <div class="skills__header section__header">
             <h2 class="skills__title title">Обо мне</h2>
             <fieldset class="skills__categories" id="category">
@@ -176,7 +169,7 @@
             </ul>
         </div>
     </section>
-    <section class="section works">
+    <section class="section works container" id="works">
         <div class="section__header works__header">
             <h2>Примеры работ</h2>
         </div>
@@ -199,10 +192,10 @@
             </article>
         </div>
     </section>
-    <section class="section education">
+    <section class="section education container" id="education">
     </section>
 </main>
-<footer class="footer">
+<footer class="footer" id="contact">
     <div class="container">
         <div class="footer__title">
             <p>Давайте обсудим проект или сотрудничество</p>
