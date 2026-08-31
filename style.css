@@ -35,8 +35,7 @@
     overflow: hidden;
 }
 
-body,
-[data-theme='light'] {
+:root {
     --color-text: #051513;
     --color-bg: #e8f0ef;
     --color-text-faint: #899492;
@@ -48,7 +47,7 @@ body,
     --color-favicon-border: #e8f0ef;
 }
 
-body, [data-theme='dark'] {
+[data-theme='dark'] {
     --color-bg: #001414;
     --color-text: #ffffff;
     --color-text-faint: #004746;
@@ -235,6 +234,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 10px;
     margin: 0;
     padding: 0;
@@ -292,7 +292,7 @@ body {
     .skills__categories {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
     }
 
     .skills__search {
@@ -328,9 +328,9 @@ body {
 }
 
 .tools__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 10px;
     padding: 0;
     margin: 0;
 }
@@ -347,11 +347,14 @@ body {
 }
 
 .tools__item svg {
+    width: 50px;
+    height: 50px;
     fill: var(--color-text);
 }
 
 .tools__item p {
     margin: 0;
+    text-align: center;
 }
 
 .footer {
