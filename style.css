@@ -165,7 +165,12 @@ body {
     gap: 20px;
 }
 
-@media (max-width: 500px) {
+.section__img img {
+    width: 258px;
+    height: 320px;
+}
+
+@media (max-width: 555px) {
     .section__img {
         display: none;
     }

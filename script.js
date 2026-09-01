@@ -1,6 +1,7 @@
 let currentCategory = document.querySelector('input[name="category"]:checked').value
 let currentSearch = document.querySelector('#search').value
 
+const resultsNotFound = document.querySelector('.skills__empty')
 const toggleThemeButton = document.getElementById("btn-toggle-theme")
 const inputsCategory = document.querySelectorAll('input[name="category"]')
 const searchInput = document.querySelector("#search")
