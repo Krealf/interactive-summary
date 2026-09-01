@@ -154,8 +154,9 @@ body {
     background-color: var(--color-bg);
 }
 
-.section--home, .section--about {
+.section--home {
     display: flex;
+    justify-content: space-between;
 }
 
 .section__body {
@@ -165,12 +166,13 @@ body {
     gap: 20px;
 }
 
-.section__img img {
-    width: 258px;
-    height: 320px;
+.section__img {
+    width: 25%;
+    height: auto;
+    object-fit: contain;
 }
 
-@media (max-width: 555px) {
+@media (max-width: 768px) {
     .section__img {
         display: none;
     }
@@ -293,7 +295,7 @@ body {
 }
 
 
-@media (max-width: 786px) {
+@media (max-width: 768px) {
     .skills__categories {
         width: 100%;
         display: grid;
@@ -389,7 +391,7 @@ body {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 375px) {
     .footer__title p {
         font-size: 20px;
     }
