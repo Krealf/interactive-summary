@@ -46,6 +46,8 @@ const filterAndSearch = () => {
             skill.style.display = 'none'
         }
     })
+
+    resultsNotFound.hidden = !Array.from(skillsItems).every((skill) => skill.style.display === 'none')
 }
 
 // Обработчик на поле поиска
