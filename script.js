@@ -62,6 +62,14 @@ inputsCategory.forEach((input) => {
     })
 })
 
+toggleThemeButton.addEventListener('click', () => {
+    if (getTheme() === "dark") {
+        setTheme("light")
+    } else {
+        setTheme("dark")
+    }
+})
+
 
 // Смена текста у кнопки при инициализации
 updateToggleText(getTheme())
